@@ -1,0 +1,26 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1 @onclick="DoSomething">Click me and look at Chrome console</h1>
+
+
+@code
+{
+    private void DoSomething()
+    {
+        var asd = new SomeClass();
+        Console.WriteLine(asd.PropertyA);
+        Console.WriteLine(asd.PropertyB);
+    }
+
+    public partial class SomeClass
+    {
+        public string PropertyA { get; set; } = string.Empty;
+    }
+
+    public partial class SomeClass
+    {
+        public string PropertyB { get; set; } = string.Empty;
+    }
+}
